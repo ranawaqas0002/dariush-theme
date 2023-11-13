@@ -1,0 +1,1327 @@
+/*
+Theme Name: Dariush Soudi Website
+Theme URI: https://dariushsoudi.com/
+Author: ARENA
+Author URI: https://arenacapital.com/
+Version: 2023
+Requires at least: 6.0
+Tested up to: 6.1
+Requires PHP: 8.0
+License: GNU General Public License v3 or Later
+License URI: https://www.gnu.org/licenses/gpl.html
+*/
+
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+   html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+  }
+  
+  /*
+   * Remove text-shadow in selection highlight:
+   * https://twitter.com/miketaylr/status/12228805301
+   *
+   * Customize the background color to match your design.
+   */
+  
+  ::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+  }
+  
+  ::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+  }
+  
+  /*
+   * A better looking default horizontal rule
+   */
+  
+  hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+  }
+  
+  
+  /*
+   * Remove the gap between audio, canvas, iframes,
+   * images, videos and the bottom of their containers:
+   * https://github.com/h5bp/html5-boilerplate/issues/440
+   */
+  
+  audio,
+  canvas,
+  iframe,
+  img,
+  svg,
+  video {
+    vertical-align: middle;
+  }
+  
+  /*
+   * Remove default fieldset styles.
+   */
+  
+  fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /*
+   * Allow only vertical resizing of textareas.
+   */
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  /* ==========================================================================
+     Author's custom styles
+     ========================================================================== */
+  
+  /* ==========================================================================
+     Helper classes
+     ========================================================================== */
+  
+  /*
+   * Hide visually and from screen readers
+   */
+  
+  .hidden,
+  [hidden] {
+    display: none !important;
+  }
+  
+  /*
+   * Hide only visually, but have it available for screen readers:
+   * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+   *
+   * 1. For long content, line feeds are not interpreted as spaces and small width
+   *    causes content to wrap 1 word per line:
+   *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+   */
+  
+  .visually-hidden {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    /* 1 */
+  }
+  
+  /*
+   * Extends the .visually-hidden class to allow the element
+   * to be focusable when navigated to via the keyboard:
+   * https://www.drupal.org/node/897638
+   */
+  
+  .visually-hidden.focusable:active,
+  .visually-hidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    white-space: inherit;
+    width: auto;
+  }
+  
+  /*
+   * Hide visually and from screen readers, but maintain layout
+   */
+  
+  .invisible {
+    visibility: hidden;
+  }
+  
+  /*
+   * Clearfix: contain floats
+   *
+   * The use of `table` rather than `block` is only necessary if using
+   * `::before` to contain the top-margins of child elements.
+   */
+  
+  .clearfix::before,
+  .clearfix::after {
+    content: "";
+    display: table;
+  }
+  
+  .clearfix::after {
+    clear: both;
+  }
+  
+  /* ==========================================================================
+     EXAMPLE Media Queries for Responsive Design.
+     These examples override the primary ('mobile first') styles.
+     Modify as content requires.
+     ========================================================================== */
+  
+  @media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+  }
+  
+  @media print,
+    (-webkit-min-device-pixel-ratio: 1.25),
+    (min-resolution: 1.25dppx),
+    (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+  }
+  
+  /* ==========================================================================
+     Print styles.
+     Inlined to avoid the additional HTTP request:
+     https://www.phpied.com/delay-loading-your-print-css/
+     ========================================================================== */
+  
+  @media print {
+    *,
+    *::before,
+    *::after {
+      background: #fff !important;
+      color: #000 !important;
+      /* Black prints faster */
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+  
+    a,
+    a:visited {
+      text-decoration: underline;
+    }
+  
+    a[href]::after {
+      content: " (" attr(href) ")";
+    }
+  
+    abbr[title]::after {
+      content: " (" attr(title) ")";
+    }
+  
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+    a[href^="#"]::after,
+    a[href^="javascript:"]::after {
+      content: "";
+    }
+  
+    pre {
+      white-space: pre-wrap !important;
+    }
+  
+    pre,
+    blockquote {
+      border: 1px solid #999;
+      page-break-inside: avoid;
+    }
+  
+    tr,
+    img {
+      page-break-inside: avoid;
+    }
+  
+    p,
+    h2,
+    h3 {
+      orphans: 3;
+      widows: 3;
+    }
+  
+    h2,
+    h3 {
+      page-break-after: avoid;
+    }
+  }
+  
+  body {
+    font-family: 'TT Hoves', 'Arial';
+    background-color: #000;
+  }
+  
+  section {
+    overflow: hidden;
+  }
+  
+  html, body {
+    color: #fff;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    -moz-osx-font-smoothing: grayscale; /*(For Firefox)*/
+    -webkit-font-smoothing: antialiased; /*(For Chrome and Safari)*/
+  }
+  
+  header {
+    padding-top: 68px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    transition: background-color 600ms, padding 600ms, top 1400ms;
+    top:0;
+  }
+  
+  header ul {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    list-style: none;
+    margin: 0 -50px;
+  }
+  
+  header ul li {
+    margin: 0 50px;
+  }
+  
+  header ul li a  {
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    transition: border 600ms;
+  }
+  
+  header ul li a:before  {
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    transition: border 600ms;
+  }
+  /* 
+  header ul li a:hover  {
+    border-bottom: 1px solid #fff;
+  } */
+  
+  header.floating {
+    background-color: #000;
+    padding: 20px 0;
+  }
+
+  header.hide {
+    top: -100px;
+  }
+  
+  #navbutton {
+    height: 28px;
+    width: 24px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    flex-flow: column;
+    display: none;
+    position: relative;
+    z-index: 1;
+  }
+  
+  #navbutton span {
+    display: inline-block;
+    height: 1px;
+    background-color: #fff;	
+    margin: 4px 0;
+    transition: transform 600ms;
+  }
+  
+  #navbutton span:nth-of-type(1) {
+    width: 24px;
+  }
+  #navbutton span:nth-of-type(2) {
+    display: none;
+  }
+  #navbutton span:nth-of-type(3) {
+    width: 24px;
+  }
+  
+  #navbutton.active span:nth-of-type(1) {
+    width: 24px;
+    transform: rotate(45deg);
+    margin: 6px 0;
+  }
+  
+  #navbutton.active span:nth-of-type(2) {
+    display: none;
+  }
+  
+  #navbutton.active span:nth-of-type(3) {
+    width: 24px;
+    transform: rotate(-45deg);
+    margin-top: -7px;
+  }
+  
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  #mainlogo {
+    text-transform: uppercase;
+    font-size: 24px;
+    font-family: 'DIN';
+    letter-spacing: 11px;
+    display: inline-block;
+  }
+  
+  #landing {
+    height: 100vh;
+  }
+  
+  .gray-bg {
+    background-color: #1A1A1A;
+  }
+  
+  #landing .container {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+  }
+  
+  #landing .container .bottom {
+    position: absolute;
+    bottom: 70px;
+    width: calc(100% - 24px);
+  }
+  
+  #landing .container .bottom .left {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+  }
+  
+  #landing .container .bottom .right {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+  
+  #landing .container h1 {
+    font-size: 42px;
+    line-height: 52px;
+    font-weight: normal;
+    font-family: 'TT Hoves';
+    max-width: 620px;
+    display: inline-block;
+    width: 100%;
+  }
+  
+  #landing .container .wrap {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  #landing .animates {
+
+  }
+
+  ul.socials {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .socials a {
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: .5;
+    transition: opacity 600ms;
+    display: inline-block;
+  }
+  
+  .socials li {
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+  } 
+  
+  .socials a.facebook { background-image: url('../img/facebook.svg'); }
+  .socials a.instagram { background-image: url('../img/instagram.svg'); }
+  .socials a.threads { background-image: url('../img/threads.svg'); }
+  .socials a.tiktok { background-image: url('../img/tiktok.svg'); } 
+  .socials a.twitter { background-image: url('../img/twitter.svg'); }
+  .socials a.linkedin { background-image: url('../img/linkedin.svg'); }
+  .socials a.youtube { width: 25px; background-image: url('../img/youtube.svg'); }
+  
+  .socials a:hover {
+    opacity: 1;
+  }
+  
+  .pt { padding-top: 300px; }
+  .pb { padding-bottom: 300px; }
+  
+  .mb-60 { margin-bottom: 60px; }
+  .mt-60 { margin-top: 60px; }
+  
+  .center-align {
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .right-align {
+    display: inline-flex;
+    justify-content: end;
+  }
+  
+  .section-heading {
+    font-size: 42px;
+    line-height: 54px;
+    margin-bottom:  35px;
+  }
+  
+  .medium-heading {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  
+  .linebt {
+    border: 1px solid rgba(255,255,255,.25);
+    padding: 0 20px;
+    height: 45px;
+    line-height: 45px;
+    text-transform: uppercase;
+    font-size: 12px;
+    transition: border 600ms;
+    display: inline-block;
+  }
+  
+  .linebt:hover { border: 1px solid rgba(255,255,255); }
+  
+  .graytext { color: #949494; }
+  .whitetext { color: #ffffff; }
+  .uppercase { text-transform: uppercase; }
+  .tinytext { font-size: 12px; }
+  
+  .slick-slide {
+    margin: 0 25px;
+  }
+  
+  .slick-list {
+    margin: 0 -25px;
+  }
+  
+  #podcast .carousel img {
+    transition: transform 600ms;
+  }
+  
+  #podcast .carousel .imglink {
+    overflow: hidden;
+    display: inline-block;
+    margin-bottom: 50px;
+    width: 100%;
+  }
+  
+  #podcast .carousel img:hover {
+    transform: scale(1.1);
+  }
+  
+  #podcast .medium-heading {
+    margin-bottom: 20px;
+    font-weight: 300;
+  }
+  
+  #podcast .carousel a {
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+  
+  #podcast .medium-heading {
+    opacity: .5;
+    transition: opacity 600ms;
+  }
+  
+  #podcasts-carousel p {
+    opacity: .5;
+    transition: opacity 600ms;
+  }
+  
+  #podcast .slide:hover .medium-heading, #podcast .slide:hover a, #podcast .slide:hover p {
+    opacity: 1;
+  }
+  
+  #podcasts-carousel .slick-dots {
+    display: flex;
+    justify-content: end;
+    margin-top: -30px;
+  }
+  
+  #podcasts-carousel .medium-heading {
+    font-size: 24px;
+  }
+
+  #podcasts-carousel .link {
+    opacity: 0;
+    transition: opacity 600ms 1000ms;
+  }
+
+  #podcasts-carousel .slick-active .link {
+    opacity: 1;
+  }
+
+  #book .left {
+    text-align: left;
+  }
+
+  #book .left img {
+    width: 100%;
+    margin-left: -30px;
+  }
+
+  #book .section-heading {
+    max-width: 70%;
+  }
+  
+  #practice .right img {
+    width: 100%;
+    margin-left: 30px;
+    max-width: 527px;
+  }
+  
+  #subscribeForm {
+      display: inline-flex;
+      justify-content: space-between;
+      margin-top: 10px;
+      width: 100%;
+  }
+  
+  form input[type="text"], form input[type="email"] {
+    background-color: #191919;
+    border: 0 !important;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 22px;
+    width: 100%;
+    margin: 0 7px;
+    font-size: 12px;
+    color: #fff;
+    background-color: #000;
+  }
+
+  form .linebt {
+    background-color: transparent;
+    color: #fff;
+    width: 100%;
+  }
+
+  #newsletterForm .fields {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -7px;
+    margin-bottom: 14px;
+  }
+
+  #subscribeForm input[type="email"], #subscribeForm input[type="text"] {
+    background-color: #191919;
+    border: 0 !important;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 22px;
+    width: 100%;
+    margin-right: 10px;
+    font-size: 12px;
+    color: #fff;
+  }
+
+  #subscribeForm input[type="text"] {
+    margin-right: 20px;
+    margin-left: 0;
+  }
+
+  #subscribeForm input[type="email"] {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  
+  #subscribeForm input[type="submit"] {
+    border: 1px solid rgba(255,255,255,.25);
+    padding: 0 20px;
+    height: 45px;
+    line-height: 45px;
+    text-transform: uppercase;
+    font-size: 12px;
+    transition: border 600ms;
+    display: inline-block;
+    background-color: transparent;
+    color: #fff;
+    width: 100%;
+    letter-spacing: 3px;
+    min-width: 200px;
+  }
+  
+  .line-carousel .box {
+    background-color: #444;
+    width: 100%;
+    padding: 70px 50px;
+    min-height: 400px;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column;
+    opacity: 0.5;
+    transition: opacity 600ms;
+  }
+  
+  .line-carousel .box a {
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+  
+  .line-carousel .box:hover {
+    opacity: 1;
+  }
+  
+  #news .socials {
+    margin: 0 -35px;
+    justify-content: end;
+  }
+  
+  #news .socials li {
+    margin: 0 25px;
+  }
+  
+  #news .linebt {
+    padding: 0 40px;
+  }
+
+  #news .medium-heading {
+    font-size: 22px;
+    line-height: 34px;
+  }
+  
+  footer .top .linebt {
+    padding: 0 40px;
+    opacity: 1;
+    border: 1px solid rgba(255,255,255,.25);
+    transition: border 600ms;
+  }
+  
+  footer .top .linebt:hover { border: 1px solid rgba(255,255,255,1); }
+  
+  footer .top .tinytext {
+    margin-bottom: 14px;
+    display: inline-flex;
+    width: 100%;
+    line-height: 20px;
+    margin-top: 50px;
+    color: #949494;
+  }
+  
+  footer .top .tinytext:first-of-type {
+    margin-top: 0;
+  }
+  
+  footer .top a {
+    opacity:1;
+    transition: opacity 600ms;
+  }
+  
+  footer .top a:hover {
+    opacity: 1;
+  }
+  
+  footer .bottom {
+    font-size: 14px;
+    padding-bottom: 45px;
+  }
+  
+  #copyright {
+    opacity: .5;
+  }
+  
+  footer .bottom ul {
+    display: flex;
+    justify-content: end;
+    list-style: none;
+    margin: 0 -22px;
+  }
+  
+  footer .bottom ul li {
+    margin: 0 22px;
+  }
+  
+  footer .bottom ul li a {
+    opacity: .5;
+    transition: opacity 600ms;
+  }
+  
+  footer .bottom ul li a:hover {
+    opacity: 1;
+  }
+  
+  .mobile-only {
+    display: none !important;
+  }
+  
+  .slick-dots {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  .slick-dots li button {
+    background-color: transparent;
+    border: 1px solid #fff;
+    opacity: .5;
+    text-indent: 100px;
+    overflow: hidden;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    margin: 0 10px;
+    display: inline-block;
+    padding: 0;
+  }
+
+  .slick-dots li.slick-active button {
+    opacity: 1;
+    background-color: #fff;
+  }
+
+  .revealtexts div {
+    display: inline-block;
+  }
+  
+  .revealtexts .word {
+    opacity: .1;
+    transition: opacity 500ms;
+  }
+
+  .revealtexts .word.active {
+    opacity: 1;
+  }
+
+  .tab-content {
+    display: none;
+  }
+  
+  .tab-content.active {
+    display: block;
+  }
+
+  .tab-buttons a {
+    margin-left: 20px;
+    letter-spacing: 5px;
+  }
+
+  .tab-buttons a.active {
+    border-color: #fff;
+  }
+
+  #investments-carousel .slide {
+    min-height: 120px;
+  }
+
+  #investments-carousel .slide {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #investments-carousel .slide img {
+    width: 190px;
+  }
+
+  .slick-arrow {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    -webkit-mask: url(../img/arrows.svg) no-repeat center;
+    mask: url(../img/arrows.svg) no-repeat center;
+    background-color: #949494;
+    text-indent: 100px;
+    overflow: hidden;
+    transition: background-color 600ms;
+  }
+
+  .slick-next {
+    transform: rotate(180deg);
+  }
+
+  .slick-arrow:hover {
+    background-color: #fff;
+  }
+
+
+  #subscribeForm {
+    flex-flow: column;
+  }
+
+  #subscribeForm input[type="submit"] {
+    margin-top: 30px;
+  }
+
+  @media only screen and (max-width: 1400px) {
+    #practice .medium-heading {
+      font-size: 23px;
+      line-height: 36px;
+    }
+  }
+
+  @media only screen and (max-width: 1200px) {
+    #practice .medium-heading {
+      font-size: 19px;
+      line-height: 36px;
+    }
+
+    #mainlogo {
+      font-size: 18px;
+    }
+  
+    header ul li {
+        margin: 0 30px;
+    }
+  
+    header ul li a {
+        font-size: 16px;
+    }
+  
+    #news .medium-heading {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  
+    .pt {
+        padding-top: 200px;
+    }
+  
+    .pb {
+        padding-bottom: 200px;
+    }
+  
+    #landing, #landing .container, #landing .wrap {
+        height: 900px !important;
+    }
+  
+    .section-heading {
+        font-size: 32px;
+        line-height: 44px;
+    }
+  
+    footer .top .col-lg-2 a {
+        font-size: 14px;
+        line-height: 24px;
+    }
+  }
+  
+  @media only screen and (max-width: 991px) {
+
+    #practice .medium-heading {
+      font-size: 26px;
+      line-height: 36px;
+    }
+
+    .mobile-only {
+      display: inline-block !important;
+    }
+  
+    .desktop-only {
+      display: none !important;
+    }
+  
+    #navbutton {
+      display: flex;
+    }
+  
+    header ul {
+      margin: 0;
+      width: 220px;
+      position: absolute;
+      flex-flow: column;
+      justify-content: end;
+      padding: 30px 0;
+      background-color: #000;
+      top: -300px;
+      transition: top 600ms;
+      right: 0;
+    }
+  
+    header ul.active {
+      top: 48px;
+    }
+  
+    header ul li {
+      margin: 0 10px;
+    }
+  
+    header .right {
+      display: flex;
+      justify-content: end;
+      position: relative;
+    }
+  
+    #my-story .right {
+      padding-top: 60px;
+    }
+  
+    .reverse-mobile {
+      flex-flow: column-reverse;
+    }
+  
+    #book .left {
+      padding-top: 30px;
+    }
+
+    #book .left img {
+      max-width: 400px;
+    }
+  
+    .pt {
+      padding-top: 120px;
+    }
+  
+    .pb {
+      padding-bottom: 120px;
+    }
+  
+    #practice .right {
+      text-align: center;
+    }
+  
+    #practice .right img {
+      margin: 0;
+    }
+  
+    #news .socials {
+      justify-content: start;
+      margin-top: 30px;
+    }
+  
+    footer .left {
+      margin-bottom: 30px;
+    }
+
+    header ul li {
+      animation-delay: 0;
+      animation: none !important;
+      opacity: 1 !important;
+    }
+
+    .right-align {
+      justify-content: start;
+    }
+
+    .tab-buttons a {
+      margin-left: 0;
+      margin-right: 10px;
+    }
+    
+  }
+  
+  @media only screen and (max-width: 767px) {
+    #landing .container h1 {
+      font-size: 30px;
+      line-height: 40px;
+      max-width: 100%;
+    }
+  
+    header {
+      padding-top: 40px; 
+    }
+  
+    html, body {
+      font-size: 16px;
+      line-height: 26px;
+    }
+  
+    #my-story .right img {
+      width: 100%;
+    }
+  
+    .section-heading {
+      font-size: 30px;
+      line-height: 40px;
+    }
+  
+    #practice .medium-heading {
+      font-size: 21px;
+      line-height: 30px;
+    }
+  
+    .mt-60 {
+      margin-top: 50px;
+    }
+  
+    footer .top .tinytext {
+      margin-bottom: 5px;
+    }
+  
+    footer .top .tinytext, footer .top .tinytext:first-of-type {
+      margin-top: 30px;
+    }
+  
+    #subscribeForm input[type="submit"] {
+      max-width: 130px;
+      min-width: 130px;
+    }
+
+    #subscribeForm {
+        flex-flow: column;
+    }
+
+    #subscribeForm input {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+
+    #subscribeForm input[type="submit"] {
+      margin-top: 30px;
+    }
+    
+    #instagram-carousel .slick-slide {
+      margin: 0 10px;
+    }
+
+    #instagram-carousel .slick-list {
+      margin: 0 -10px;
+    }
+
+    #practice .right img {
+      margin: 0;
+      max-width: 300px;
+    }
+
+    .socials li {
+        margin: 0 15px;
+        display: flex;
+        align-items: center;
+    }
+
+    #news .socials {
+      margin: 30px -15px 0;
+    }
+    
+    #news .socials li {
+      margin: 0 15px;
+    }
+
+    #podcast .linebt {
+      padding: 0 10px;
+      font-size: 10px;
+    }
+
+    #newsletterForm .fields {
+      margin: 0;
+      flex-flow: column;
+    }
+
+    form input[type="text"], form input[type="email"]  {
+      margin: 0 0 10px 0;
+    }
+  }
+  
+  @media only screen and (max-width: 567px) {
+  
+    #landing, #landing .container, #landing .wrap {
+      height: 780px !important;
+    }
+
+    #mainlogo {
+      position: relative;
+      z-index: 1;
+    }
+  
+    header ul {
+      height: 100vh;
+      width: 100%;
+      justify-content: center;
+      position: fixed;
+      top: 0;
+      display: none;
+    }
+
+    header ul.active {
+      right: 0;
+      top: 0;
+      display: inline-flex;
+    }
+
+    header ul li {
+      margin-bottom: 40px !important;
+    }
+
+    header ul li a {
+      font-size: 20px;
+    }
+
+    header.active.floating ul {
+      top: 48px;
+    }
+  
+    .container {
+      padding-left: 40px !important;
+      padding-right: 40px !important;
+    }
+  
+    #landing .container .bottom {
+      position: absolute;
+      bottom: 60px;
+      width: calc(100% - 40px);
+    }
+  
+    header ul li {
+      margin: 0 10px;
+      margin-bottom: 20px;
+    }
+
+    #book .left img {
+      max-width: 300px;
+    }
+
+    #landing .container h1 {
+      font-size: 28px;
+      line-height: 40px;
+    }
+
+    #news .medium-heading {
+      font-size: 18px;
+      line-height: 28px;
+    }
+
+    #practice .medium-heading {
+      font-size: 18px;
+      line-height: 28px;
+    }
+
+    .section-heading {
+      font-size: 22px;
+      line-height: 38px;
+    }
+  }
+
+  @media only screen and (max-width: 520px) {
+    #landing .container .bottom .left {
+      display: none;
+    }
+
+    #landing .container .bottom .right {
+      justify-content: start;
+    }
+  }
+
+  @media only screen and (max-width: 485px) {
+
+    #landing .container h1 {
+      font-size: 24px;
+      line-height: 34px;
+    }
+
+  }
+
+  @media only screen and (max-width: 445px) {
+
+    #news .medium-heading {
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+    #practice .medium-heading {
+      font-size: 16px;
+      line-height: 26px;
+    }
+
+    .socials li {
+        margin: 0 10px;
+    }
+
+    #landing .container .bottom .right .socials li:first-of-type {
+      margin-left: 0;
+    }
+  }
+  @media only screen and (max-width: 428px) {
+    #landing .container h1 {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+
+  @media only screen and (max-width: 407px) {
+
+    #practice .medium-heading {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+
+
+/********************************************************* ANIMATIONS **********************************************************/
+/* ----------------------------------------------
+ * Generated by Animista on 2023-6-14 12:4:47
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+ 
+ .animate { opacity: 0; }
+ .animate.animated { opacity: 1; }
+
+.fade-in-left{-webkit-animation:fade-in-left .6s cubic-bezier(.39,.575,.565,1.000) both;animation:fade-in-left .6s cubic-bezier(.39,.575,.565,1.000) both}
+@-webkit-keyframes fade-in-left{0%{-webkit-transform:translateX(-50px);transform:translateX(-50px);opacity:0}100%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}}@keyframes fade-in-left{0%{-webkit-transform:translateX(-50px);transform:translateX(-50px);opacity:0}100%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}}
+.fade-in{-webkit-animation:fade-in 2s cubic-bezier(.39,.575,.565,1.000) both;animation:fade-in 2s cubic-bezier(.39,.575,.565,1.000) both}
+@-webkit-keyframes fade-in{0%{opacity:0}100%{opacity:1}}@keyframes fade-in{0%{opacity:0}100%{opacity:1}}
+.fade-in-bottom{-webkit-animation:fade-in-bottom 2s cubic-bezier(.39,.575,.565,1.000) both;animation:fade-in-bottom 2s cubic-bezier(.39,.575,.565,1.000) both}
+@-webkit-keyframes fade-in-bottom{0%{-webkit-transform:translateY(50px);transform:translateY(50px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes fade-in-bottom{0%{-webkit-transform:translateY(50px);transform:translateY(50px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}
+.fade-in-top{-webkit-animation:fade-in-top .6s cubic-bezier(.39,.575,.565,1.000) both;animation:fade-in-top .6s cubic-bezier(.39,.575,.565,1.000) both}
+.fade-in-top-2{-webkit-animation:fade-in-top .6s cubic-bezier(.39,.575,.565,1.000) .4s both;animation:fade-in-top .6s cubic-bezier(.39,.575,.565,1.000) .4s both;}
+@-webkit-keyframes fade-in-top{0%{-webkit-transform:translateY(-50px);transform:translateY(-50px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes fade-in-top{0%{-webkit-transform:translateY(-50px);transform:translateY(-50px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}
+.fade-in-right{-webkit-animation:fade-in-right .6s cubic-bezier(.39,.575,.565,1.000) both;animation:fade-in-right .6s cubic-bezier(.39,.575,.565,1.000) both}
+@-webkit-keyframes fade-in-right{0%{-webkit-transform:translateX(50px);transform:translateX(50px);opacity:0}100%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}}@keyframes fade-in-right{0%{-webkit-transform:translateX(50px);transform:translateX(50px);opacity:0}100%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}}
+.heartbeat{-webkit-animation:heartbeat 20s ease-in-out infinite both;animation:heartbeat 20s ease-in-out infinite both}
+@-webkit-keyframes heartbeat{from{-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:center center;transform-origin:center center;-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}10%{-webkit-transform:scale(.91);transform:scale(.91);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}17%{-webkit-transform:scale(.98);transform:scale(.98);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}33%{-webkit-transform:scale(.87);transform:scale(.87);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}45%{-webkit-transform:scale(1);transform:scale(1);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}}@keyframes heartbeat{from{-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:center center;transform-origin:center center;-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}10%{-webkit-transform:scale(.91);transform:scale(.91);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}17%{-webkit-transform:scale(.98);transform:scale(.98);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}33%{-webkit-transform:scale(.87);transform:scale(.87);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}45%{-webkit-transform:scale(1);transform:scale(1);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}}
+.text-focus-in{-webkit-animation:text-focus-in 1s cubic-bezier(.55,.085,.68,.53) both;animation:text-focus-in 1s cubic-bezier(.55,.085,.68,.53) both}
+@-webkit-keyframes text-focus-in{0%{-webkit-filter:blur(12px);filter:blur(12px);opacity:0}100%{-webkit-filter:blur(0);filter:blur(0);opacity:1}}@keyframes text-focus-in{0%{-webkit-filter:blur(12px);filter:blur(12px);opacity:0}100%{-webkit-filter:blur(0);filter:blur(0);opacity:1}}
+.fade-out-top{-webkit-animation:fade-out-top .7s cubic-bezier(.25,.46,.45,.94) both;animation:fade-out-top .7s cubic-bezier(.25,.46,.45,.94) both}
+@-webkit-keyframes fade-out-top{0%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}100%{-webkit-transform:translateY(-50px);transform:translateY(-50px);opacity:0}}@keyframes fade-out-top{0%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}100%{-webkit-transform:translateY(-50px);transform:translateY(-50px);opacity:0}}
+
+header ul li:nth-of-type(1) { animation-delay: 100ms; }
+header ul li:nth-of-type(2) { animation-delay: 200ms; }
+header ul li:nth-of-type(3) { animation-delay: 300ms; }
+header ul li:nth-of-type(4) { animation-delay: 400ms; }
+header ul li:nth-of-type(5) { animation-delay: 500ms; }
+
+.animates {
+  overflow: hidden;
+}
+
+.animates:nth-of-type(1) .rotate { transition-delay: 200ms; }
+.animates:nth-of-type(2) .rotate { transition-delay: 400ms; }
+.animates:nth-of-type(3) .rotate { transition-delay: 600ms; }
+.animates:nth-of-type(4) .rotate { transition-delay: 800ms; }
+.animates:nth-of-type(5) .rotate { transition-delay: 1000ms; }
+
+.rotate {
+  transform: translateY(150%) rotate(5deg);
+  -webkit-transform: translateY(150%) rotate(5deg);
+  display: inline-block;
+  transition: transform 1000ms;
+}
+
+.rotate-back {
+  transform: translateY(0%) rotate(0deg);
+  -webkit-transform: translateY(0%) rotate(0deg);
+}

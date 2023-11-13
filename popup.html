@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Popup</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    
+  </style>
+</head>
+<body>
+
+<!-- Popup Trigger Button -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Open Popup
+</button>
+
+<!-- Popup Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        
+        <div class="container-fluid popup-content ">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="row">
+            <!-- Image on the left for desktop, on top for mobile -->
+            <div class="col-md-6 img-container">
+              <img src="assets\img\popup-img.png" alt="Image" class="img-fluid">
+            </div>
+            <!-- Text and form on the right for desktop, below for mobile -->
+            <div class="col-md-6 mt-3 mt-md-0 ">
+              <h2 class="popup-h2">30 Days To Boost Your Sales</h2>
+              <p class="popup-p">Get a simple, easy-to-follow guide with daily actionable steps that work. 30 days to boost your sales is a free email course by Dariush Soudi.</p>
+              <!-- Newsletter Form -->
+              <form>
+                <div class="form-group">
+                  <input type="email" class="popup-form" placeholder="Enter Your Email Address">
+                </div>
+                <button type="submit" class="popup-btn">START DAY 1</button>
+                <button type="button" class="popup-btn-2" data-dismiss="modal">NO THANKS</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
